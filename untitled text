@@ -1,0 +1,22 @@
+recordBtn.onclick = async () => {
+      if (!mediaRecorder || mediaRecorder.state === "inactive") {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+        audioChunks = [];
+
+        mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+        mediaRecorder.onstop = () => {
+          audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+          uploadBtn.disabled = false;
+          wave.loadBlob(audioBlob);
+        };
+
+        mediaRecorder.start();
+        recordBtn.textContent = "Stop Recording";
+        recordBtn.style.backgroundColor = "#7f8c8d";
+      } else {
+        mediaRecorder.stop();
+        recordBtn.textContent = "Start Recording";
+        recordBtn.style.backgroundColor = "#e74c3c";
+      }
+    };

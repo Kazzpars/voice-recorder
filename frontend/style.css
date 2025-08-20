@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+#recordBtn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#recordBtn:hover {
+    background-color: #c0392b;
+}
+
+#uploadBtn {
+    background-color: #3498db;
+    color: white;
+}
+
+#uploadBtn:hover {
+    background-color: #2980b9;
+}
+
+#recordingList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#recordingList li {
+    background: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+audio {
+    width: 70%;
+}
+
+a.download {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}

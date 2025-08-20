@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Interaktif</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Selamat Datang</h2>
+            <p>Silakan masuk untuk melanjutkan</p>
+            <form action="#">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="options">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        Ingat saya
+                    </label>
+                    <a href="#" class="forgot-password">Lupa Password?</a>
+                </div>
+                <button type="submit" class="login-button">Masuk</button>
+            </form>
+            <div class="signup-link">
+                <p>Belum punya akun? <a href="#">Daftar di sini</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
